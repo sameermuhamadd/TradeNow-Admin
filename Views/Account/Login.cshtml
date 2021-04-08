@@ -1,0 +1,149 @@
+﻿@model TradeNow_Admin.Models.AccountModel.LoginRequestModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TradeNow-Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/Content/LoginPage/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/LoginPage/css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-form-title" style="background-image: url(images/bg-01.jpg);">
+                    <span class="login100-form-title-1">
+                        Sign In
+                    </span>
+                </div>
+
+
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+                        <span class="label-input100">Username</span>
+                        @*<input class="input100" type="text" name="username" placeholder="Enter username" id="txtUsername">*@
+                        @Html.TextBoxFor(m => m.Username, htmlAttributes: new {@class = "input100", placeholder="Enter username"})
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100">Password</span>
+                        @*<input class="input100" type="password" name="pass" placeholder="Enter password" id="txtPassword" >*@
+                        @Html.TextBoxFor(m => m.Password, htmlAttributes: new { @class = "input100", placeholder = "Enter password" })
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="flex-sb-m w-full p-b-30">
+                        <div class="contact100-form-checkbox">
+                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label class="label-checkbox100" for="ckb1">
+                                Remember me
+                            </label>
+                        </div>
+
+                        <div>
+                            <a href="#" class="txt1">
+                                Forgot Password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" id="btnLogin" type="submit">
+                            Login
+                        </button>
+                    </div>
+                }
+
+                <!--Bootstrap alert to display error message if the login fails-->
+                <!--<div id="divError" class="alert alert-danger collapse">
+                    <a id="linkClose" href="#" class="close">&times;</a>
+                    <div id="divErrorText"></div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    @*<script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#linkClose').click(function () {
+                    $('#divError').hide('fade');
+                });
+
+                $('#btnLogin').click(function () {
+                    $.ajax({
+                        // Post username, password & the grant type to /token
+                        url: @System.Configuration.ConfigurationManager.AppSettings["URL"] + 'token',
+                        method: 'POST',
+                        contentType: 'application/json',
+                        data: {
+                            username: $('#txtUsername').val(),
+                            password: $('#txtPassword').val(),
+                            grant_type: 'password'
+                        },
+                        // When the request completes successfully, save the
+                        // access token in the browser session storage and
+                        // redirect the user to Data.html page. We do not have
+                        // this page yet. So please add it to the
+                        // EmployeeService project before running it
+                        success: function (response) {
+                            sessionStorage.setItem("accessToken", response.access_token);
+                            window.location.href = "Data.html";
+                        },
+                        // Display errors if any in the Bootstrap alert <div>
+                        error: function (jqXHR) {
+                            $('#divErrorText').text(jqXHR.responseText);
+                            $('#divError').show('fade');
+                        }
+                    });
+                });
+            });
+        </script>*@
+
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/bootstrap/js/popper.js"></script>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/Content/LoginPage/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/Content/LoginPage/js/main.js"></script>
+
+</body>
+</html>

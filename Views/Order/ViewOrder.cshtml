@@ -1,0 +1,113 @@
+﻿@model IEnumerable<TradeNow_Admin.Models.OrderModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Order History</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Seller_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pickup_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Shipping_Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNum_Buyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNum_Seller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuyerConfirmed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerConfirmed)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buyer_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seller_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pickup_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Shipping_Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNum_Buyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNum_Seller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuyerConfirmed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerConfirmed)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
