@@ -127,6 +127,7 @@
     <Compile Include="Controllers\ComplainController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\RiderController.cs" />
     <Compile Include="Global.asax.cs">
@@ -135,6 +136,7 @@
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\ComplainModel.cs" />
     <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\Register.cs" />
     <Compile Include="Models\ReportModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -600,6 +602,8 @@
     <Content Include="Views\Complain\ComplainList.cshtml" />
     <Content Include="Views\Complain\ComplainDetail.cshtml" />
     <Content Include="Views\Report\ReportList.cshtml" />
+    <Content Include="Views\Register\Create.cshtml" />
+    <Content Include="Views\Register\RiderLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
