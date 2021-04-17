@@ -1,31 +1,272 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <!-- Title Page-->
+    <title>Dashboard 4</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="~/Content/css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="~/Content/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="~/Content/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="~/Content/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        <header class="header-desktop4">
+            <div class="container">
+                <div class="header4-wrap">
+                    <div class="header__logo">
+                        <a href="#">
+                            <p style="font-size: 30px; font-weight: 100px;">Admin Panel</p>
+                        </a>
+                    </div>
+                    </div>
+                    <div class="header__tool">
+
+                        <div class="header-button-item js-item-menu">
+                            <i class="zmdi zmdi-settings"></i>
+                            <div class="setting-dropdown js-dropdown">
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-account"></i>Account
+                                        </a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-settings"></i>Setting
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="account-dropdown__body">
+
+
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-email"></i>Email
+                                        </a>
+                                    </div>
+                                    <div class="account-dropdown__item">
+                                        <a href="#">
+                                            <i class="zmdi zmdi-notifications"></i>Notifications
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account-wrap">
+                            <div class="account-item account-item--style2 clearfix js-item-menu">
+                                <div class="image">
+                                    <img src="~/Content/images/default.png" alt="John Doe" />
+                                </div>
+                                <div class="content">
+                                    <a class="js-acc-btn" href="#">john doe</a>
+                                </div>
+                                <div class="account-dropdown js-dropdown">
+                                    <div class="info clearfix">
+                                        <div class="image">
+                                            <a href="#">
+                                                <img src="~/Content/images/default.png" alt="John Doe" />
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            <h5 class="name">
+                                                <a href="#">Admin</a>
+                                            </h5>
+                                            <span class="email">admin314@gmail.com</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </header>
+        <!-- END HEADER DESKTOP -->
+        <!-- WELCOME-->
+        <section class="welcome2 p-t-40 p-b-55">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="au-breadcrumb3">
+                            <div class="au-breadcrumb-left">
+                                <span class="au-breadcrumb-span">You are here:</span>
+                                <ul class="list-unstyled list-inline au-breadcrumb__list">
+                                    <li class="list-inline-item active">
+                                        <a href="#">Home</a>
+                                    </li>
+                                    <li class="list-inline-item seprate">
+                                        <span>/</span>
+                                    </li>
+                                    <li class="list-inline-item">Dashboard</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="welcome2-inner m-t-60">
+                            <div class="welcome2-greeting">
+                                <h1 class="title-6">
+                                    Hi
+                                    <span>Admin</span>, Welcome back
+                                </h1>
+                                <p>This is the Admin Panel</p>
+                            </div>
+                            <form class="form-header form-header2" action="" method="post">
+                                <input class="au-input au-input--w435" type="text" name="search" placeholder="Search for datas &amp; reports...">
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END WELCOME-->
+        <!-- PAGE CONTENT-->
+        <!-- END ALERT-->
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+    
+    <section>
+        <br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3">
+                    <!-- MENU SIDEBAR-->
+                    <aside class="menu-sidebar3 js-spe-sidebar">
+                        <nav class="navbar-sidebar2 navbar-sidebar3">
+                            <ul class="list-unstyled navbar__list">
+                                <li class="active has-sub">
+                                    <a class="js-arrow" href="#">
+                                        <i class="fas fa-tachometer-alt"></i>Your Dashboard
+                                        <span class="arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+
+                                        <li>
+                                            <a href="index4.html">Dashboard</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                    <li>
+                                        <a href="table.html">Tables</a>
+                                    </li>
+                                    <li>
+                                        <a href="form.html">Forms</a>
+                                    </li>
+
+                                </ul>
+                                
+                                <li class="has-sub">
+                                    <a class="js-arrow" href="#">
+                                        <i class="fas fa-copy"></i>Registration
+                                        <span class="arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                        <li>
+                                            <a href="login.html">Login</a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="form.html">
+                                        <i class="fas fa-chart-bar"></i>Rider Registration
+                                    </a>
+                                    <!-- <span class="inbox-num">3</span> -->
+                                </li>
+                                <li>
+                                    <a href="table.html">
+                                        <i class="fas fa-chart-bar"></i>Order History
+                                    </a>
+                                    <!-- <span class="inbox-num">3</span> -->
+                                </li>
+                                <li>
+                                    <a href="complain.html">
+                                        <i class="fas fa-chart-bar"></i>Complains
+                                    </a>
+                                    <!-- <span class="inbox-num">3</span> -->
+                                </li>
+
+                                <li>
+                                    <a href="riderList.html">
+                                        <i class="fas fa-table"></i>Riders List
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
+                    <!-- END MENU SIDEBAR-->
+                </div>
+
+
+                <!-- END PAGE CONTENT-->
+            </div>
+        </div>
+        @*</div>*@
+    </section>
+    @*</div>*@
+    <!-- END PAGE CONTENT  -->
+    @*</div>*@
+
+    <!-- Jquery JS-->
+    <script src="~/Content/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="~/Content/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="~/Content/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="~/Content/vendor/slick/slick.min.js"></script>
+    <script src="~/Content/vendor/wow/wow.min.js"></script>
+    <script src="~/Content/vendor/animsition/animsition.min.js"></script>
+    <script src="~/Content/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="~/Content/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Content/vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="~/Content/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/Content/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="~/Content/vendor/select2/select2.min.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
