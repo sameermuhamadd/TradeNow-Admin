@@ -44,7 +44,7 @@ namespace TradeNow_Admin.Controllers
                 var response = client.PostAsync("token?", httpContent);
                 if (response.Result.IsSuccessStatusCode)
                 {
-                    return RedirectToAction("ViewOrder","Order");
+                    return RedirectToAction("Index","Home");
                 }
                 return View();
             }
