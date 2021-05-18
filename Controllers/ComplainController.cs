@@ -38,6 +38,7 @@ namespace TradeNow_Admin.Controllers
         public ActionResult ComplainDetail()
         {
 
+
             return View();
         }
     }
