@@ -3,73 +3,220 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>RiderLogin</title>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Rider Registration</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="~/Content/Template/css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="~/Content/Template/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="~/Content/Template/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="~/Content/Template/style.css">
+    <!-- Main CSS-->
+    <link href="~/Content/Template/css/theme.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
-<body>
-    @using (Html.BeginForm()) 
-    {
-        @Html.AntiForgeryToken()
-        
-        <div class="form-horizontal">
-            <h4>Register</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                </div>
+
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img style="width: 150px; height: 80px;" src="https://www.clipartkey.com/mpngs/m/52-529997_riding-toy-food-delivery-guy-png.png" alt="Rider Registration" />
+                </a>
             </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
-                </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+
             </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.FName, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.FName, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.FName, "", new { @class = "text-danger" })
+        </aside>
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <!-- <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form> -->
+                            <label style="align-items: center; font-size: 30px; font-weight: 100; margin-left: 550px;" class="ForHeader">TradeNow.PK</label>
+                            <div class="header-button">
+
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    
-            <div class="form-group">
-                @Html.LabelFor(model => model.UserType, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.UserType, "", new { @class = "text-danger" })
+            </header>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <br/>
+                <br/>
+                <br/>
+                <div class="container">
+
+                    <hr />
+                    <form onsubmit="return RiderRegistered()" action="Index">
+                        
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="user-details">
+
+                                <div class="input-box">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(  model => model.Email, new { htmlAttributes = new { @id = "email", @class = "form-control", autocomplete = "off"} })
+
+                                </div>
+
+                                <div class="input-box">
+                                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @id = "password", @class = "form-control", autocomplete = "off" } })
+                                </div>
+                        
+                                <div class="input-box">
+                                    @Html.LabelFor(model => model.ConfirmPassword, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @id = "confirmPassword", @class = "form-control", autocomplete = "off" } })
+                                </div>
+
+                                <div class="input-box">
+                                    @Html.LabelFor(model => model.FName, htmlAttributes: new { @class = "control-label col-md-2" })
+                                         @Html.EditorFor(model => model.FName, new { htmlAttributes = new { @id = "fname", @class = "form-control", autocomplete = "off" } })
+                                    </div>
+                                    <div class="input-box">
+                                        @Html.LabelFor(model => model.UserType, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            @Html.EditorFor(model => model.UserType, new { htmlAttributes = new { @id = "type", @class = "form-control", autocomplete = "off" } })
+                                        </div>
+                                            <div style="
+                                            height: 45px;
+                                            margin: 45px 0;
+                                            position:center;" class="button">
+                                                <input style="  height: 100%;
+                                                width: 200px;
+                                                outline: none;
+                                                background-color: red;
+                                                border: none;
+                                                font-size: 17px;
+                                                font-weight: 400;
+                                                letter-spacing: 1px;
+                                                color: white;
+                                                border-radius: 20px;" type="submit" value="Register" onclick="RiderRegistered()">
+                                            </div>
+                                        @*<div class="col-md-offset-2 col-md-10">
+                                            <input type="submit" value="Create" class="btn btn-default" onclick="RiderRegistered()" />
+                                        </div>
+                                    </div>*@
+                                </div>
+                    </form>
                 </div>
-            </div>
-    
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
-                </div>
-            </div>
-        </div>
-    }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
+            }
+
+                     </div>
     </div>
+
+
+    <script>
+        function RiderRegistered() {
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+            var fname = document.getElementById("fname");
+            var type = document.getElementById("type");
+            var cpass = document.getElementById("confirmPassword")
+            if (email.value == "" || password.value == "" || fname.value == "" || type.value == "") {
+                window.alert("Fiil out the Form");
+
+            }
+
+            else {
+                if (cpass.value != password.value) {
+                    window.alert("Wrong Password");
+                }
+                else {
+                    window.alert("Rider Registered");
+                }
+            }
+            window.onload = RiderRegistered;
+        }
+    </script>
+
+    <!-- Jquery JS-->
+    <script src="~/Content/Template/vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="~/Content/Template/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="~/Content/Template/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="~/Content/Template/vendor/slick/slick.min.js">
+    </script>
+    <script src="~/Content/Template/vendor/wow/wow.min.js"></script>
+    <script src="~/Content/Template/vendor/animsition/animsition.min.js"></script>
+    <script src="~/Content/Template/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="~/Content/Template/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="~/Content/Template/vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="~/Content/Template/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="~/Content/Template/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/Content/Template/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="~/Content/Template/vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="~/Content/Template/js/main.js"></script>
+    }
 </body>
 </html>

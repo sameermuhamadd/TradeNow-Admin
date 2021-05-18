@@ -1,4 +1,4 @@
-﻿
+﻿@model TradeNow_Admin.Models.Register
 @{
     Layout = null;
 }
@@ -44,6 +44,9 @@
 </head>
 
 <body class="animsition">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
@@ -61,28 +64,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="navbar-mobile">
-                <div class="container-fluid">
-                    <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>As an Admin
-                            </a>
-                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-
-                    </ul>
-                </div>
-            </nav>
+           
         </header>
         <!-- END HEADER MOBILE-->
         <!-- MENU SIDEBAR-->
@@ -93,28 +75,7 @@
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
-                <nav class="navbar-sidebar">
-                    <ul class="list-unstyled navbar__list">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="#">
-                                <i class="fas fa-tachometer-alt"></i>As an Admin
-                            </a>
-                            <ul class="list-unstyled navbar__sub-list js-sub-list">
-
-                                <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-
-
-                            </ul>
-                        </li>
-
-
-
-                    </ul>
-                    </li>
-                    </ul>
-                </nav>
+              
             </div>
         </aside>
         <!-- END MENU SIDEBAR-->
@@ -158,163 +119,51 @@
                             <div class="user-details">
 
                                 <div class="input-box">
-                                    <span class="details">First Name</span>
-                                    <input id="F_name" type="text" placeholder="Enter Your First Name" required>
+                                    <span class="details">Email</span>
+                                    <input id="F_name" type="email" placeholder="Enter Your Email" required>
                                 </div>
 
                                 <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
                                 <br>
                                 <div class="input-box">
-                                    <span class="details">Last Name</span>
-                                    <input id="L_name" type="text" placeholder="Enter Your Last Name" required>
+                                    <span class="details">Password</span>
+                                    <input id="L_name" type="password" placeholder="Enter your Password" required>
                                     <label id="invalid_email" , style="color: red;visibility: hidden;"></label>
                                 </div>
                                 <br>
 
                                 <br>
                                 <div class="input-box">
-                                    <span class="details">Email</span>
-                                    <input id="email_ID" type="email" placeholder="Enter Your Email" required>
+                                    <span class="details">Confirm Password</span>
+                                    <input id="email_ID" type="password" placeholder="Password" required>
                                 </div>
                                 <br>
                                 <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
                                 <br>
                                 <div class="input-box">
-                                    <span class="details">DOB</span>
-                                    <input id="dob" type="text" placeholder="Enter Your DOB" required>
+                                    <span class="details">First Name</span>
+                                    <input id="dob" type="text" placeholder="Enter Your First Name" required>
                                 </div>
                                 <br>
                                 <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
                                 <br>
                                 <div class="input-box">
-                                    <span class="details">Contact</span>
-                                    <input id="contact" type="number" placeholder="Enter Your Contact" required>
+                                    <span class="details">User Type</span>
+                                    <input id="contact" type="text" placeholder="Enter Your Type" required>
                                 </div>
                                 <br>
                                 <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
                                 <br>
-                                <div class="input-box">
-                                    <span class="details">CNIC</span>
-                                    <input id="cnic" type="text" placeholder="Enter Your CNIC" required>
-                                </div>
-                                <br>
-                                <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
-                                <br>
-                                <div class="input-box">
-                                    <span class="details">Address</span>
-                                    <input id="address" type="text" placeholder="Enter your Address" required>
-                                </div>
-                                <br>
-                                <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
-                                <br>
-                                <div class="input-box">
-                                    <span class="details">Licenese</span>
-                                    <input id="lic" type="text" placeholder="Enter your Licenese No." required>
-                                </div>
-                                <br>
-                                <label id="invalid_msg" , style="color: red;visibility: hidden;"></label>
-                                <br>
-                                <div style="padding: 10px;" class="dropdown">
-                                    <button class="dropbtn">Select Country</button>
-                                    <div class="dropdown-content">
-                                        <a href="#"></a>
-                                        <a href="#"></a>
-                                        <a href="#"></a>
-                                    </div>
-                                </div>
-                                <div style="padding: 10px;" class="dropdown">
-                                    <button class="dropbtn">Select City</button>
-                                    <div class="dropdown-content">
-                                        <a href="#"></a>
-                                        <a href="#"></a>
-                                        <a href="#"></a>
-                                        <a href="#"></a>
-                                    </div>
-                                </div>
-                                <div style="padding: 10px;" class="dropdown">
-                                    <button class="dropbtn">Select Religion</button>
-                                    <div class="dropdown-content">
-                                        <a href="#">Muslim</a>
-                                        <a href="#">Hindu</a>
-                                        <a href="#">Christian</a>
-                                        <a href="#">Others</a>
-                                    </div>
-                                </div>
+                                
 
-                            </div>
-
-                            <div style="font-size: 20px; padding-bottom: 5px;" class="ForWhoForRadio">
-                                <label>
-                                    Choose Your Nationalty
-                                </label>
-                            </div>
-
-                            <label class="radio-inline">
-                                <input type="radio" name="optradio" checked>Pakistan
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="optradio">Foreigner
-                            </label>
-
-
-
-                            <div style="padding: 10px;" class="pic-input">
-                                <div class="pic-input-2">
-                                    <label for="file-input" class=" form-control-label">CNIC Front</label>
-                                </div>
-                                <div class="pic-input-3">
-                                    <input type="file" id="file-input" name="file-input" st class="form-control-file">
-                                </div>
-                            </div>
-                            <div style="padding: 10px;" class="pic-input2">
-                                <div class="pic-input2-2">
-                                    <label for="file-input" class=" form-control-label">CNIC Back</label>
-                                </div>
-                                <div class="pic-input2-3">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                </div>
-                            </div>
-
-                            <div style="padding: 10px;" class="pic-input3">
-                                <div class="pic-input3-2">
-                                    <label for="file-input" class=" form-control-label">Vehicle Paper Front</label>
-                                </div>
-                                <div class="pic-input3-3">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                </div>
-                            </div>
-
-                            <div style="padding: 10px;" class="pic-input4">
-                                <div class="pic-input4-2">
-                                    <label for="file-input" class=" form-control-label">Vehicle Paper Back</label>
-                                </div>
-                                <div class="pic-input4-3">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                </div>
-                            </div>
-
-                            <div style="padding: 10px;" class="pic-input5">
-                                <div class="pic-input5-2">
-                                    <label for="file-input" class=" form-control-label">Driving Licenese Front</label>
-                                </div>
-                                <div class="pic-input5-3">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                </div>
-                            </div>
-
-                            <div style="padding: 10px;" class="pic-input6">
-                                <div class="pic-input6-2">
-                                    <label for="file-input" class=" form-control-label">Driving License Back</label>
-                                </div>
-                                <div class="pic-input6-3">
-                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
-                                </div>
-                            </div>
+                           <br /><br />
 
                             <div style="
                                 height: 45px;
-                                margin: 45px 0;" class="button">
+                                margin: 45px 0;
+                                position:center;" class="button">
                                 <input style="  height: 100%;
+                                    
                                     width: 200px;
                                     outline: none;
                                     background-color: red;
@@ -330,28 +179,7 @@
                     </form>
                 </div>
                 <!-- For the validation -->
-                <script>
-                          function validation()
-                          {
-                             var check_email = document.getElementById("email_ID")
-                             var check_fname = document.getElementById("F_name")
-                             var check_lname = document.getElementById("L_name")
-                             var check_dob = document.getElementById("dob")
-                             var check_cnic = document.getElementById("cnic")
-                             var check_lic = document.getElementById("lic")
-                             var check_address = document.getElementById("address");
-                             if(check_cnic.value.trim() =="" ||check_lname.value.trim() =="" ||check_fname.value.trim() =="" ||check_emal.value.trim() =="" ||check_address.value.trim() =="" ||check_dob.value.trim() =="" ||check_lic.value.trim() =="")
-                             {
-                                 alert("Please fill in the form");
-                                 document.getElementById("invalid_email").style.visibility = "visible";
-                                 return false;
-                             }
-                             else
-                             {
-                                 return true;
-                             }
-                          }
-                </script>
+           
                 <div class="row">
                     <div class="col-md-12">
                         <div class="copyright">
@@ -364,7 +192,7 @@
     </div>
     </div>
 
-    </div>
+
 
     <!-- Jquery JS-->
     <script src="~/Content/Template/vendor/jquery-3.2.1.min.js"></script>
@@ -389,7 +217,7 @@
 
     <!-- Main JS-->
     <script src="~/Content/Template/js/main.js"></script>
-
+}
 </body>
 
 </html>

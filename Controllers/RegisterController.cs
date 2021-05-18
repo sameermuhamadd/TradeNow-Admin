@@ -30,11 +30,16 @@ namespace TradeNow_Admin.Controllers
 
                 var postResult = postJob.Result;
                 if (postResult.IsSuccessStatusCode)
+                {
                     return RedirectToAction("Index", "Home");
-
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Server Error");
+                    return View(registerRiders);
+                }
             }
-            ModelState.AddModelError(string.Empty, "Server Error");
-                return View(registerRiders);
         }
+        
     }
 }

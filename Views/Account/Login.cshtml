@@ -71,7 +71,7 @@
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
                         <span class="label-input100">Password</span>
                         @*<input class="input100" type="password" name="pass" placeholder="Enter password" id="txtPassword" >*@
-                        @Html.TextBoxFor(m => m.Password, htmlAttributes: new { @class = "input100", placeholder = "Enter password" })
+                        @Html.TextBoxFor(m => m.Password, htmlAttributes: new { @class = "input100", placeholder = "Enter password", autocomplete="off" })
                         <span class="focus-input100"></span>
                     </div>
 
