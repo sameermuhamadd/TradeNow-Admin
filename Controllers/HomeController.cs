@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Http;
+using System.Web.Configuration;
+using TradeNow_Admin.Models;
 
 namespace TradeNow_Admin.Controllers
 {

@@ -1,0 +1,66 @@
+﻿@model TradeNow_Admin.Models.ComplainModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ComplainModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Complain_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complain_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complain_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complain_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complain_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complain_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complain_Satus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complain_Satus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
