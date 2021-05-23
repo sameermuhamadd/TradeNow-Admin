@@ -37,9 +37,29 @@ namespace TradeNow_Admin.Controllers
         }
         public ActionResult ComplainDetail()
         {
-
-
             return View();
+        }
+        public ActionResult Details(int id)
+        {
+           
+         //   IEnumerable<ComplainModel> complainList = null;
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(WebConfigurationManager.AppSettings["URL"]);
+                var response = client.GetAsync(string.Format("api/help/complain/detail?id={0}", id));
+                response.Wait();
+
+              var     result = response.Result;
+
+                if (result.IsSuccessStatusCode)
+                {
+                    var content = result.Content.ReadAsAsync<ComplainModel>();
+                    content.Wait();
+                    //         complainList = content.Result;
+                }
+                return View(result);
+            }
+            
         }
     }
 }

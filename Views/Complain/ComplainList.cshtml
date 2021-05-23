@@ -261,15 +261,20 @@
                                             <td>
                                                 @Html.DisplayFor(modelItem => item.Date)
                                             </td>
-                                            <td><a href=@Url.Action("ComplainDetail","Complain")>
-                                                <div class="table-data-feature">
+                                            <td>
+                                            <td>
+                                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                                @Html.ActionLink("Details", "Details", new { id = item.Complain_Id }) |
+                                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                            </td>
+                                                @*<div class="table-data-feature">
 
-                                                    <button class="item" data-toggle="tooltip" data-placement="top" title="View">
+                                                    <button class="item" data-toggle="ootltip" data-placement="top" title="View" onclick="@Url.Action("Details","Complain", new { id = item.Complain_Id }) ">
                                                         <i class="zmdi zmdi-mail-send"></i>
                                                     </button>
                                                 </div>
-                                               </a>
-                                            </td>
+                                              
+                                            </td>*@
                                         </tr>
                                     }
                                 </table>

@@ -258,6 +258,7 @@
                                                     </td>
                                                     </tr>
                                             }
+                                           
                                           </tbody>
                                           
                                     </table>
@@ -273,11 +274,24 @@
                                 </div>
                             </div>
                         </div>
+                        @*<div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <button onclick="getLength()">Click</button>
+                                </div>
+                            </div>
+                        </div>*@
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function getLength()
+        {
+            alert(document.getElementById('tableData').cells.length)
+        }
+    </script>
     <!-- Jquery JS-->
     <script src="~/Content/Template/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
