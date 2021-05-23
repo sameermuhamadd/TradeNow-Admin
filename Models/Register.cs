@@ -12,7 +12,7 @@ namespace TradeNow_Admin.Models
             public string Password { get; set; }
             public string ConfirmPassword { get; set; }
             public string FName { get; set; }
-          //  public string UserType { get; set; }
+        public string UserType { get; set; }
             public string DOJ { get; set; }
             public int PhoneNumber { get; set; }
             public string City { get; set; }

@@ -35,7 +35,7 @@ namespace TradeNow_Admin.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Server Error");
+                    //ModelState.AddModelError(string.Empty, "Server Error");
                     return View(registerRiders);
                 }
             }
