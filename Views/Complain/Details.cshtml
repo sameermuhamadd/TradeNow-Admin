@@ -3,64 +3,375 @@
 @{
     ViewBag.Title = "Details";
 }
+<!DOCTYPE html>
+<html lang="en">
 
-<h2>Details</h2>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-<div>
-    <h4>ComplainModel</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Complain_Id)
-        </dt>
+    <!-- Title Page-->
+    <title>Rider Registration</title>
 
-        <dd>
-            @Html.DisplayFor(model => model.Complain_Id)
-        </dd>
+    <!-- Fontfaces CSS-->
+    <link href="~/Content/Template/css/font-face.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Complain_Type)
-        </dt>
+    <!-- Bootstrap CSS-->
+    <link href="~/Content/Template/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
 
-        <dd>
-            @Html.DisplayFor(model => model.Complain_Type)
-        </dd>
+    <!-- Vendor CSS-->
+    <link href="~/Content/Template/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="~/Content/Template/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="~/Content/Template/style.css">
+    <!-- Main CSS-->
+    <link href="~/Content/Template/css/theme.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Complain_Description)
-        </dt>
+</head>
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" alt="CoolAdmin" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Complain_Description)
-        </dd>
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img style="width: 150px; height: 80px;" src="https://www.clipartkey.com/mpngs/m/52-529997_riding-toy-food-delivery-guy-png.png" alt="Rider Registration" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Complain_Satus)
-        </dt>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <!-- <form class="form-header" action="" method="POST">
+                            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                            <button class="au-btn--submit" type="submit">
+                                <i class="zmdi zmdi-search"></i>
+                            </button>
+                        </form> -->
+                            <label style="align-items: center; font-size: 30px; font-weight: 100; margin-left: 550px;" class="ForHeader">TradeNow.PK</label>
+                            <div class="header-button">
 
-        <dd>
-            @Html.DisplayFor(model => model.Complain_Satus)
-        </dd>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.User_Id)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.User_Id)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+            <body class="animsition">
+                <div class="page-wrapper">
+                    <!-- HEADER MOBILE-->
+                    <header class="header-mobile d-block d-lg-none">
+                        <div class="header-mobile__bar">
+                            <div class="container-fluid">
+                                <div class="header-mobile-inner">
+                                    <a class="logo" href="index.html">
+                                        <img src="images/default.png" alt="CoolAdmin" />
+                                    </a>
+                                    <button class="hamburger hamburger--slider" type="button">
+                                        <span class="hamburger-box">
+                                            <span class="hamburger-inner"></span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="navbar-mobile">
+                            <div class="container-fluid">
+                                <ul class="navbar-mobile__list list-unstyled">
+                                    <li class="has-sub">
+                                        <a class="js-arrow" href="#">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard
+                                        </a>
+                                        <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                            <li>
+                                                <a href="index4.html">Open Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="form.html">
+                                            <i class="fas fa-chart-bar"></i>Rider Registration
+                                        </a>
+                                    </li>
+                                    <li class="table">
+                                        <a href="table.html">
+                                            <i class="fas fa-table"></i>Order History
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="complain.html">
+                                            <i class="fas fa-table"></i>Complains
+                                        </a>
+                                    </li>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                                    <li class="has-sub">
+                                        <a class="js-arrow" href="#">
+                                            <i class="fas fa-copy"></i>Admin
+                                        </a>
+                                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                            <li>
+                                                <a href="login.html">Login</a>
+                                            </li>
+                                            <li>
+                                                <a href="register.html">Register</a>
+                                            </li>
+                                            <li>
+                                                <a href="forget-pass.html">Forget Password</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+                    <!-- END HEADER MOBILE-->
+                    <!-- MENU SIDEBAR-->
+                    <aside class="menu-sidebar d-none d-lg-block">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="images/icon/logo.png" alt="Cool Admin" />
+                            </a>
+                        </div>
+                        <div class="menu-sidebar__content js-scrollbar1">
+                            <nav class="navbar-sidebar">
+                                <ul class="list-unstyled navbar__list">
+                                    <li class="has-sub">
+                                        <a class="js-arrow" href="#">
+                                            <i class="fas fa-tachometer-alt"></i>Dashboard
+                                        </a>
+                                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+
+                                            <li>
+                                                <a href="@Url.Action("Index","Home")">Open Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("RiderLogin","Register")">
+                                            <i class="fas fa-chart-bar"></i>Rider Registration
+                                        </a>
+                                    </li>
+                                    <li class="table">
+                                        <a href="@Url.Action("ViewOrder","Order")">
+                                            <i class="fas fa-table"></i>Order History
+                                        </a>
+                                    </li>
+
+                                    <li class="active">
+                                        <a href="@Url.Action("ComplainList","Complain")">
+                                            <i class="fas fa-table"></i>Complains
+                                        </a>
+                                    </li>
+                                    <li class="has-sub">
+                                        <a class="js-arrow" href="#">
+                                            <i class="fas fa-copy"></i>Admin
+                                        </a>
+                                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                            <li>
+                                                <a href="@Url.Action("Login","Accoint")">Login</a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+                    <!-- END MENU SIDEBAR-->
+                    <!-- PAGE CONTAINER-->
+                    <div class="page-container">
+                        <!-- HEADER DESKTOP-->
+                        <header class="header-desktop">
+                            <div class="section__content section__content--p30">
+                                <div class="container-fluid">
+                                    <div class="header-wrap">
+
+                                        <div class="header-button">
+
+                                            <div class="account-wrap">
+                                                <div class="account-item clearfix js-item-menu">
+
+                                                    <div class="account-dropdown js-dropdown">
+                                                        <div class="info clearfix">
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <!-- END HEADER DESKTOP-->
+                        <!-- MAIN CONTENT-->
+                        <div class="main-content">
+                            <div class="section__content section__content--p30">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <strong class="card-title">Complain Detail</strong>
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <div class="typo-headers">
+                                                        <h3 id="subject_complain"></h3>
+
+                                                    </div>
+                                                    <div class="typo-articles">
+                                                        <strong id="complain_description">
+                                                            @Html.DisplayNameFor(model => model.Complain_Description)
+                                                        </strong>
+
+                                                    </div>
+                                                    <div class="vue-misc">
+
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+                                                                <address class="mt-3">
+
+                                                                    <dl class="dl-horizontal">
+                                                                        <dt>
+                                                                            @Html.DisplayNameFor(model => model.Complain_Id)
+                                                                        </dt>
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.Complain_Id)
+                                                                        </dd>
+
+                                                                        <dt>
+                                                                            @Html.DisplayNameFor(model => model.Complain_Type)
+                                                                        </dt>
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.Complain_Type)
+                                                                        </dd>
+
+                                                                       
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.Complain_Description)
+                                                                        </dd>
+
+                                                                        <dt>
+                                                                            @Html.DisplayNameFor(model => model.Complain_Satus)
+                                                                        </dt>
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.Complain_Satus)
+                                                                        </dd>
+
+                                                                        <dt>
+                                                                            @Html.DisplayNameFor(model => model.User_Id)
+                                                                        </dt>
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.User_Id)
+                                                                        </dd>
+
+                                                                        <dt>
+                                                                            @Html.DisplayNameFor(model => model.Date)
+                                                                        </dt>
+
+                                                                        <dd>
+                                                                            @Html.DisplayFor(model => model.Date)
+                                                                        </dd>
+
+                                                                    </dl>
+                                                                </address>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <p>
+                                                        <a href="/Complain/Resolve/@Model.Complain_Id">Resolve</a> |
+                                                        @Html.ActionLink("Back to List", "Index")
+                                                    </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                              
+
+                                                    <!-- Jquery JS-->
+                                                    <script src="~/Content/Template/vendor/jquery-3.2.1.min.js"></script>
+                                                    <!-- Bootstrap JS-->
+                                                    <script src="~/Content/Template/vendor/bootstrap-4.1/popper.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+                                                    <!-- Vendor JS       -->
+                                                    <script src="~/Content/Template/vendor/slick/slick.min.js">
+                                                    </script>
+                                                    <script src="~/Content/Template/vendor/wow/wow.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/animsition/animsition.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+                                                    </script>
+                                                    <script src="~/Content/Template/vendor/counter-up/jquery.waypoints.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/counter-up/jquery.counterup.min.js">
+                                                    </script>
+                                                    <script src="~/Content/Template/vendor/circle-progress/circle-progress.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+                                                    <script src="~/Content/Template/vendor/chartjs/Chart.bundle.min.js"></script>
+                                                    <script src="~/Content/Template/vendor/select2/select2.min.js">
+                                                    </script>
+
+                                                    <!-- Main JS-->
+                                                    <script src="~/Content/Template/js/main.js"></script>
+                                                    }
+                                        
+</body>
+</html>

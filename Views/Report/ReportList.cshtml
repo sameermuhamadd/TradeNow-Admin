@@ -133,25 +133,25 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="form.html">
+                            <a href=@Url.Action("RiderLogin","Register")>
                                 <i class="fas fa-chart-bar"></i>Rider Registration
                             </a>
                         </li>
                         <li class="table">
-                            <a href="table.html">
+                            <a href=@Url.Action("ViewOrder","Order")>
                                 <i class="fas fa-table"></i>Order History
                             </a>
                         </li>
 
                         <li class="active">
-                            <a href="complain.html">
-                                <i class="fas fa-table"></i>Complains
+                            <a href=@Url.Action("ReportList","Report")>
+                                <i class="fas fa-table"></i>Report
                             </a>
                         </li>
 
                         <li>
-                            <a href="riderList.html">
-                                <i class="fas fa-table"></i>Riders List
+                            <a href=@Url.Action("ComplainList","Complain")>
+                                <i class="fas fa-table"></i>Complains
                             </a>
                         </li>
                         <li class="has-sub">
@@ -160,13 +160,7 @@
                             </a>
                             <ul class="list-unstyled navbar__sub-list js-sub-list">
                                 <li>
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a href="forget-pass.html">Forget Password</a>
+                                    <a href=@Url.Action("Login","Account")>Login</a>
                                 </li>
 
                             </ul>

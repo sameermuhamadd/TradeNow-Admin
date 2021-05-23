@@ -30,11 +30,11 @@ namespace TradeNow_Admin.Controllers
                     content.Wait();
                     complainList = content.Result;
                 }
-                
+
             }
-            
+
             return View(complainList);
-         
+
         }
         public ActionResult ComplainDetail()
         {
@@ -42,8 +42,8 @@ namespace TradeNow_Admin.Controllers
         }
         public ActionResult Details(int id)
         {
-           
-         //   IEnumerable<ComplainModel> complainList = null;
+
+            //   IEnumerable<ComplainModel> complainList = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(WebConfigurationManager.AppSettings["URL"]);
@@ -56,13 +56,32 @@ namespace TradeNow_Admin.Controllers
                 if (result.IsSuccessStatusCode)
                 {
                     complain = content.Result;
-                    
+
                     return PartialView(complain);
                 }
                 return View(complain);
 
             }
-            
         }
-    }
+        public ActionResult Resolve(int id)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(WebConfigurationManager.AppSettings["URL"]);
+                var response = client.GetAsync(string.Format("api/help/complain/resolve?id={0}", id));
+                response.Wait();
+
+                var result = response.Result;
+                //var content = result.Content.ReadAsAsync<ComplainModel>();
+                ComplainModel complain = new ComplainModel();
+                //if (result.IsSuccessStatusCode)
+                //{
+                //  //  complain = content.Result;
+
+                // //   return PartialView(complain);
+                //}
+                return RedirectToAction("ComplainList", "Complain");
+            }
+        }
+        }
 }
