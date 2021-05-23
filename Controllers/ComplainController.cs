@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Configuration;
 using System.Web.Mvc;
@@ -49,15 +50,17 @@ namespace TradeNow_Admin.Controllers
                 var response = client.GetAsync(string.Format("api/help/complain/detail?id={0}", id));
                 response.Wait();
 
-              var     result = response.Result;
-
+                var result = response.Result;
+                var content = result.Content.ReadAsAsync<ComplainModel>();
+                ComplainModel complain = new ComplainModel();
                 if (result.IsSuccessStatusCode)
                 {
-                    var content = result.Content.ReadAsAsync<ComplainModel>();
-                    content.Wait();
-                    //         complainList = content.Result;
+                    complain = content.Result;
+                    
+                    return PartialView(complain);
                 }
-                return View(result);
+                return View(complain);
+
             }
             
         }

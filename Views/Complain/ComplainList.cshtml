@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<TradeNow_Admin.Models.ComplainModel>
+    @using System.Web.Configuration;
 
 @{
 
@@ -264,7 +265,7 @@
                                             <td>
                                             <td>
                                                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                                                @Html.ActionLink("Details", "Details", new { id = item.Complain_Id }) |
+                                                <a href="/Complain/Details/@item.Complain_Id">Details</a> |
                                                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
                                             </td>
                                                 @*<div class="table-data-feature">
